@@ -1,0 +1,15 @@
+{
+  "name": "chainscribe",
+  "version": "1.0.0",
+  "description": "ChainScribe — AI-Powered On-Chain Publishing & Dynamic NFT Platform | Web3 × Long-Horizon Task",
+  "scripts": {
+    "backend": "cd backend && uvicorn api.main:app --host 0.0.0.0 --port 8000 --reload",
+    "frontend": "cd frontend && npx serve src -l 3000",
+    "demo": "cd demo && python3 run_demo.py",
+    "demo:publish": "cd demo && python3 run_demo.py --mode publish",
+    "demo:narrative": "cd demo && python3 run_demo.py --mode narrative",
+    "demo:dao": "cd demo && python3 run_demo.py --mode dao"
+  },
+  "keywords": ["web3", "ai-agent", "nft", "publishing", "long-horizon"],
+  "license": "MIT"
+}

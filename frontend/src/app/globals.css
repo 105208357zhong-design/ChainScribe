@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #00d4ff;
+  --secondary: #7b2ff7;
+  --accent: #e94560;
+  --dark: #0a0e27;
+}
+
+body {
+  background: var(--dark);
+  color: #e0e0e0;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0a0e27; }
+::-webkit-scrollbar-thumb { background: #1e2a5a; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #2d3f7a; }
+
+/* 发光效果 */
+.glow-primary { box-shadow: 0 0 20px rgba(0, 212, 255, 0.3); }
+.glow-secondary { box-shadow: 0 0 20px rgba(123, 47, 247, 0.3); }
+.glow-accent { box-shadow: 0 0 20px rgba(233, 69, 96, 0.3); }
+
+/* 渐变文字 */
+.gradient-text {
+  background: linear-gradient(135deg, #00d4ff, #7b2ff7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 动画 */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 5px rgba(0, 212, 255, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(0, 212, 255, 0.6); }
+}
+
+.animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+
+@keyframes slide-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slide-in { animation: slide-in 0.3s ease-out; }
+
+/* 步骤进度条 */
+.step-progress {
+  background: linear-gradient(90deg, #00d4ff, #7b2ff7, #e94560);
+  background-size: 200% 100%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
